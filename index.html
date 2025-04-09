@@ -15,7 +15,7 @@
     <title>Burna Boy Token | $BURNA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-      body {
+     body {
         margin: 0;
         font-family: 'Inter', sans-serif;
         background-color: #000;
@@ -34,21 +34,35 @@
       header img.logo {
         height: 40px;
       }
-      nav {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-      nav a:hover {
-        color: orange;
-      }
-      .hero {
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+  background: rgba(255, 165, 0, 0.1);
+}
+#root {
+  display: flex;
+  align-items: center;
+}
+ .hero {
   background-image: url('burna-logo1.png');
   background-size: cover;
   background-position: center;
@@ -182,25 +196,28 @@ section#tokenomics {
       .sponsor-track a:hover img {
         transform: scale(1.1);
       }
-      @media (max-width: 500px) {
+      @media (max-width: 768px) {
   header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
   }
 
-  nav {
-    flex-direction: row;
-    gap: 0.75rem;
-    width: 80%;
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
     margin-top: 1rem;
   }
 
-  nav a {
-    padding: 0.5rem 0;
-    font-size: 1rem;
+  nav {
+    flex-direction: column;
+    width: 100%;
   }
 
+  #root {
+    width: 100%;
+  }
   .hero {
     padding: auto;
     min-height: auto;
@@ -261,13 +278,11 @@ section#tokenomics {
       <a href="#whitepaper">Whitepaper</a>
       <a href="#about">About</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="#dao">DAO</a>  
-    </nav>
-<div id="root"><button id="connectWalletBtn" style=" background-color: orange; color: white; font-size: 1rem;">Connect Wallet</button>
-  <script type="module" src="/src/main.jsx"></script></div>
- </div>
+      <a href="#dao">DAO</a>
+	  <div id="root"><button id="connectWalletBtn" style=" background-color: orange; color: white; font-size: 1rem;">Connect Wallet</button><script type="module" src="/src/main.jsx"></script></div>
+</div>	  
+    </nav>  
 </header>
-	  
 
 
 <div class="hero" id="about">
@@ -289,11 +304,9 @@ section#tokenomics {
       </p>
     </div>
     <div class="card cta-center">
-  <div id="root"></div>
   <p style="max-width: 240px; font-size: 0.9rem;">
     Connect your wallet to join the $BURNA Web3 revolution — Trade, Stake, and Govern. 
   </p>
-  <script type="module" src="/src/main.jsx"></script>
 </div>
     <div class="card" style="grid-column: 3; grid-row: 2;">
       <div class="icon">🤝</div>
