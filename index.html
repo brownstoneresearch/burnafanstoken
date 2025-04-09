@@ -16,48 +16,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
      body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #000;
-        color: white;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: #0e0e0e;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      header img.logo {
-        height: 40px;
-      }
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: white;
+    }
 
-nav {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  transition: color 0.3s ease, background 0.3s ease;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0e0e0e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav a:hover {
-  color: orange;
-  background: rgba(255, 165, 0, 0.1);
-}
+    header img.logo {
+      height: 40px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      transition: color 0.3s ease, background 0.3s ease;
+    }
+
+    nav a:hover {
+      color: orange;
+      background: rgba(255, 165, 0, 0.1);
+    }
+
+    #connectWalletBtn {
+      background-color: orange;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #connectWalletBtn:hover {
+      background-color: #ff9933;
+    }
 #root {
   display: flex;
   align-items: center;
@@ -134,14 +154,31 @@ section#tokenomics {
         margin-bottom: 0.75rem;
       }
       .cta-center {
-        grid-column: 2 / span 1;
-        grid-row: 2 / span 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-      }
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    #buyBtn {
+      background-color: #222;
+      color: orange;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    #buyBtn:hover {
+      background-color: #333;
+    }
+
+    #buyError {
+      display: none;
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
       .cta-center button {
         background-color: orange;
         color: white;
@@ -270,18 +307,17 @@ section#tokenomics {
     </style>
   </head>
   <body>
-   <header>
+ <header>
   <img src="logo-image.png" alt="$BURNA Logo" class="logo" />
-  
   <div class="header-right">
     <nav>
       <a href="#whitepaper">Whitepaper</a>
       <a href="#about">About</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#dao">DAO</a>
-	  <div id="root"><button id="connectWalletBtn" style=" background-color: orange; color: white; font-size: 1rem;">Connect Wallet</button><script type="module" src="/src/main.jsx"></script></div>
-</div>	  
-    </nav>  
+    </nav>
+    <button id="connectWalletBtn">Connect Wallet</button>
+  </div>
 </header>
 
 
@@ -303,13 +339,15 @@ section#tokenomics {
         Unlock Afrobeat’s next frontier with NFT-backed music, animations, and concert moments. Own collectible digital art with blockchain-certified provenance and enjoy token-gated access to events, backstage drops, and exclusive artist releases.
       </p>
     </div>
-    <div class="card cta-center">
-  <p style="max-width: 240px; font-size: 0.9rem;">
-    Connect your wallet to join the $BURNA Web3 revolution — Trade, Stake, and Govern. 
+    <div class="cta-center">
+  <p style="max-width: 240px; font-size: 0.9rem; margin: 0 auto;">
+    Connect your wallet to join the $BURNA Web3 revolution — Trade, Stake, and Govern.
   </p>
-	    <div id="root"></div>
-	    <script type="module" src="/src/main.jsx"></script>
+  <button id="buyBtn">Buy $BURNA on Uniswap</button>
+  <p id="buyError"></p>
 </div>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
     <div class="card" style="grid-column: 3; grid-row: 2;">
       <div class="icon">🤝</div>
       <h2>Fan-Powered Creator Economy</h2>
@@ -401,6 +439,34 @@ section#tokenomics {
 	&copy; 2025 $BURNA Project. Built for the culture. | 
     <a href="#">Terms</a>  <a href="#">Privacy</a>   <a href="#">Contact</a>
   </footer>
+	  
+<script>
+  let walletConnected = false;
 
+  document.getElementById("connectWalletBtn").addEventListener("click", async () => {
+    if (typeof window.ethereum !== "undefined") {
+      try {
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+        const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+        document.getElementById("connectWalletBtn").innerText = short;
+        walletConnected = true;
+        document.getElementById("buyError").style.display = "none";
+      } catch (err) {
+        alert("Wallet connection failed.");
+      }
+    } else {
+      alert("Please install MetaMask.");
+    }
+  });
+
+  document.getElementById("buyBtn").addEventListener("click", () => {
+    if (!walletConnected) {
+      document.getElementById("buyError").innerText = "Please connect your wallet before buying $BURNA.";
+      document.getElementById("buyError").style.display = "block";
+      return;
+    }
+    window.open("https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae", "_blank");
+  });
+</script>
 </body>
 </html>
