@@ -96,6 +96,27 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-buttons a {
+  background-color: orange;
+  color: black;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background-color: #ff9933;
+}
 
 section#tokenomics {
   background: rgba(290, 290, 290, 0.12);
@@ -230,74 +251,6 @@ section#tokenomics {
       }
       .sponsor-track a:hover img {
         transform: scale(1.1);
-      }
-      @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  #root {
-    width: 100%;
-  }
-  .hero {
-    padding: auto;
-    min-height: auto;
-  }
-
-  .diamond-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .diamond-grid .card {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .cta-center {
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .cta-center button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem 1.25rem;
-  }
-
-  section#tokenomics {
-    margin: 2rem 1rem;
-    padding: 1rem;
-  }
-
-  table {
-    font-size: 0.85rem;
-    word-break: break-word;
-  }
-
-  footer {
-    padding: 1rem;
-    font-size: 0.85rem;
-  }
-
-  .social-icons img {
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -309,21 +262,24 @@ section#tokenomics {
   <img src="logo-image.png" alt="$BURNA Logo" class="logo" />
   <div class="header-right">
     <nav>
-      <a href="/whitepaper">Whitepaper</a>
-      <a href="/about">About</a>
-      <a href="/roadmap">Roadmap</a>
-      <a href="/dao">DAO</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#dao">DAO</a>
     </nav>
     <button id="connectWalletBtn">Connect Wallet</button>
   </div>
 </header>
 
 
-<div class="hero" id="about">
-  <h1 style="text-align: center; font-size: 5rem; margin-bottom: 1rem; color: orange;">
-    BURNABOY TOKEN
-  </h1>
-
+<section class="hero">
+  <p><h1>Tokenize Fun With Burna Boy</h1>
+ <h2><strong>Meme That Moves A Culture. Built On Vibes, Protected By Code, To Decentralize Value, Empower Holders, And Make Web3 More Fun.</strong></h2></p>
+  <div class="cta-buttons">
+  <a href="#whitepaper">Read Whitepaper</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#burna">Who is Burna Boy?</a>
+</div>
+</div>
   <div class="diamond-grid" id="features">
     <!-- Feature 1 -->
     <div class="card" style="grid-column: 2; grid-row: 1;">
@@ -373,7 +329,7 @@ section#tokenomics {
       </p>
     </div>
   </div>
-</div>
+</section>
 
   <section id="tokenomics" style="max-width: 900px; margin: 4rem auto; padding: 2rem;"><strong>
     <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: white;">$BURNA TOKENOMICS</h2>
