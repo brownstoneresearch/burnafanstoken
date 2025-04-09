@@ -34,5 +34,11 @@ const ConnectWallet = () => {
     </button>
   );
 };
+useEffect(() => {
+  if (account) {
+    window.onWalletConnected && window.onWalletConnected(account);
+  }
+}, [account]);
+
 
 export default ConnectWallet;
