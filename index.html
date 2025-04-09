@@ -322,9 +322,12 @@ section#tokenomics {
 
 
 <div class="hero" id="about">
-    <h1 style="text-align: center; font-size: 5rem; margin-bottom: 1rem; color: orange;">BURNABOY TOKEN</h1>
-	
-	 <div class="diamond-grid" id="features">
+  <h1 style="text-align: center; font-size: 5rem; margin-bottom: 1rem; color: orange;">
+    BURNABOY TOKEN
+  </h1>
+
+  <div class="diamond-grid" id="features">
+    <!-- Feature 1 -->
     <div class="card" style="grid-column: 2; grid-row: 1;">
       <div class="icon">🌐</div>
       <h2>Decentralized Governance (DAO)</h2>
@@ -332,6 +335,8 @@ section#tokenomics {
         Participate in a fully autonomous governance system where $BURNA holders control the future. Propose, deliberate, and execute smart contract-driven policies for treasury use, platform updates, and community-led innovations without intermediaries.
       </p>
     </div>
+
+    <!-- Feature 2 -->
     <div class="card" style="grid-column: 1; grid-row: 2;">
       <div class="icon">🎧</div>
       <h2>Web3 Music NFTs</h2>
@@ -339,15 +344,8 @@ section#tokenomics {
         Unlock Afrobeat’s next frontier with NFT-backed music, animations, and concert moments. Own collectible digital art with blockchain-certified provenance and enjoy token-gated access to events, backstage drops, and exclusive artist releases.
       </p>
     </div>
-   <div id="root"></div>
-    <div class="cta-center">
-  <p style="max-width: 240px; font-size: 0.9rem; margin: 0 auto;">
-    Connect your wallet to join the $BURNA Web3 revolution — Trade, Stake, and Govern.
-  </p>
-  <button id="buyBtn">Buy $BURNA on Uniswap</button>
-  <p id="buyError"></p>
-<script type="module" src="/src/main.jsx"></script>
-</div>
+
+    <!-- Feature 3 -->
     <div class="card" style="grid-column: 3; grid-row: 2;">
       <div class="icon">🤝</div>
       <h2>Fan-Powered Creator Economy</h2>
@@ -355,6 +353,22 @@ section#tokenomics {
         $BURNA fuels a permissionless creator economy. Fans become co-producers by funding albums, voting on collaborations, and earning social rewards via peer-to-peer engagement. Eliminate middlemen, amplify creativity.
       </p>
     </div>
+
+    <!-- Center CTA (Buy + Connect) -->
+    <div class="card cta-center" style="grid-column: 2; grid-row: 2;">
+      <p style="max-width: 240px; font-size: 0.9rem; margin: 0 auto;">
+        Connect your wallet to join the $BURNA Web3 revolution — Trade, Stake, and Govern.
+      </p>
+
+      <button id="buyBtn">Buy $BURNA on Uniswap</button>
+      <p id="buyError" style="color: red; font-size: 0.85rem; display: none;"></p>
+
+      <!-- Wallet Connect Mount -->
+      <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    </div>
+
+    <!-- Feature 4 -->
     <div class="card" style="grid-column: 2; grid-row: 3;">
       <div class="icon">💸</div>
       <h2>DeFi Infrastructure for Culture</h2>
@@ -362,8 +376,9 @@ section#tokenomics {
         Power the ecosystem with decentralized finance tools: stake tokens, earn yields, and provide liquidity — all while reinforcing a tokenized circular economy rooted in Afrobeat expression and Web3 utility.
       </p>
     </div>
-	</div>
+  </div>
 </div>
+
   <section id="tokenomics" style="max-width: 900px; margin: 4rem auto; padding: 2rem;">
     <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: orange;">$BURNA TOKENOMICS</h2>
 	<div style="margin-top: 1.5rem; text-align: center;">
@@ -443,28 +458,19 @@ section#tokenomics {
 <script>
   let walletConnected = false;
 
-  document.getElementById("connectWalletBtn").addEventListener("click", async () => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-        const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
-        document.getElementById("connectWalletBtn").innerText = short;
-        walletConnected = true;
-        document.getElementById("buyError").style.display = "none";
-      } catch (err) {
-        alert("Wallet connection failed.");
-      }
-    } else {
-      alert("Please install MetaMask.");
-    }
-  });
+  window.onWalletConnected = function(account) {
+    walletConnected = true;
+    document.getElementById("buyError").style.display = "none";
+  };
 
   document.getElementById("buyBtn").addEventListener("click", () => {
     if (!walletConnected) {
-      document.getElementById("buyError").innerText = "Please connect your wallet before buying $BURNA.";
-      document.getElementById("buyError").style.display = "block";
+      const error = document.getElementById("buyError");
+      error.innerText = "Please connect your wallet before buying $BURNA.";
+      error.style.display = "block";
       return;
     }
+
     window.open("https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae", "_blank");
   });
 </script>
