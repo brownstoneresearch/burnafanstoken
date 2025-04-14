@@ -115,12 +115,10 @@
       <img src="logo-image.png" href="index.html" alt="$BURNA Logo" class="logo" />
 	  </a>
   <div class="header-right">
-     <nav>
+    <nav>
       <a href="features.html">Features</a>
       <a href="dao.html">DAO</a>
-	  <p id="wallet-address"></p>
     </nav>
-    <button id="connectWalletBtn">Connect Wallet</button>
   </div>
 </header>
 
@@ -157,6 +155,26 @@
     <p><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Contact</a></p>
     <p>&copy; 2025 $BURNA Project. Built for the culture.</p>
   </footer>
+  <script>
+  let walletConnected = false;
+
+  document.getElementById("connectWalletBtn").addEventListener("click", async () => {
+    if (typeof window.ethereum !== "undefined") {
+      try {
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+        const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+        document.getElementById("connectWalletBtn").innerText = short;
+        walletConnected = true;
+        document.getElementById("buyError")?.style.display = "none";
+      } catch (err) {
+        alert("Wallet connection failed.");
+      }
+    } else {
+      alert("Please install MetaMask.");
+    }
+  });
+</script>
+
 </body>
 </html>
 
