@@ -1,91 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Roadmap | $BURNA</title>
+  <meta charset="UTF-8">
+  <title>$BURNA Roadmap</title>
+  <link rel="icon" type="image/png" href="/burna-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #000;
-      color: white;
-      text-align: center;
+      background-image: url('burna-logo1.png');
+      color: orange;
     }
-    header, footer {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       background-color: #0e0e0e;
-      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header img.logo {
-      height: 40px;
+      height: 60px;
     }
-    nav {
-      margin-top: 1rem;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
     }
     nav a {
       color: white;
-      text-decoration: none;
       margin: 0 1rem;
+      text-decoration: none;
       font-weight: 600;
     }
     nav a:hover {
       color: orange;
     }
-    h1 {
+	#connectWalletBtn {
+      background-color: orange;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+  #connectWalletBtn:hover {
+      background-color: #ff9933;
+ }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      color: white;
+    }
+    h1, h2 {
       color: orange;
-      font-size: 2.5rem;
-      margin-top: 2rem;
     }
-    a {
-      color: #ff9933;
-      text-decoration: none;
+    .phase {
+      margin-bottom: 2rem;
     }
-    footer a {
-      color: orange;
-      text-decoration: none;
+    .phase h3 {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: #fff;
     }
-    footer a:hover {
-      text-decoration: underline;
+    .phase ul {
+      padding-left: 1.5rem;
     }
+    .phase ul li {
+      margin-bottom: 0.75rem;
+	  }
+      footer {
+        background-color: #111;
+        padding: 2rem;
+        text-align: center;
+        color: #888;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: #ff9933;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
     .social-icons {
-      margin: 1rem 0;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      display: inline-block;
     }
     .social-icons img {
       width: 24px;
-      margin: 0 0.5rem;
-      filter: invert(1);
+      height: 24px;
+      filter: brightness(0) invert(1);
     }
+	
   </style>
 </head>
 <body>
-  
-<header>
-  <img src="/assets/logo-image.png" alt="$BURNA Logo" class="logo" />
-  <nav>
-    <a href="about.html">About</a>
-    <a href="features.html">Features</a>
-    <a href="roadmap.html">Roadmap</a>
-    <a href="dao.html">DAO</a>
-    <a href="community.html">Community</a>
-    <a href="whitepaper.html">Whitepaper</a>
-  </nav>
+ <header>
+  <a href="index.html">
+      <img src="logo-image.png" href="index.html" alt="$BURNA Logo" class="logo" />
+	  </a>
+  <div class="header-right">
+    <nav>
+      <a href="/features">Features</a>
+      <a href="/dao">DAO</a>
+	  <p id="wallet-address"></p>
+    </nav>
+    <button id="connectWalletBtn">Connect Wallet</button>
+  </div>
 </header>
 
   <main>
-    <h1>Roadmap</h1>
-    <p>This is the roadmap section of the $BURNA DApp site.</p>
-    <p><a href="index.html">← Back to Home</a></p>
-  </main>
-  
-<footer>
-  <div class="social-icons">
-    <a href="https://x.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
-    <a href="https://discord.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" /></a>
-    <a href="https://t.me" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" /></a>
-  </div>
-  <p>&copy; 2025 $BURNA Project. Built for the culture. | <a href="#">Terms</a> <a href="#">Privacy</a> <a href="#">Contact</a></p>
-</footer>
+    <h1>$BURNA Project Roadmap</h1>
+    <p>The $BURNA roadmap is built to evolve in four strategic phases, delivering community value from token launch through to ecosystem expansion, creator infrastructure, and global cultural impact.</p>
 
+    <div class="phase">
+      <h2>Phase 1: Launch & Foundation (Q2 2025)</h2>
+      <ul>
+        <li>Token Creation & Audit — Deployed and verified on Ethereum, with audited smart contracts</li>
+        <li>Website & Whitepaper Release — Public transparency through launch site</li>
+        <li>Community Airdrops & Whitelisting — Rewards for early adopters and Afrobeat ambassadors</li>
+        <li>DEX Listing (Uniswap) — Liquidity provision and token analytics dashboard</li>
+        <li>Staking Pool Live — Stake $BURNA for passive rewards</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 2: Ecosystem Growth (Q3 2025)</h2>
+      <ul>
+        <li>NFT Genesis Drop — Afrobeat-themed NFT collection (art, music, perks)</li>
+        <li>Creator Onboarding Program — Digital artists and musicians join the platform</li>
+        <li>DAO Governance Activation — Snapshot voting and proposal system launched</li>
+        <li>Merch Store (Beta) — Apparel and NFT-redeemable merch for holders</li>
+        <li>Analytics & Wallet Dashboard — View staking, balances, votes, and more</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 3: Utility & Integration (Q4 2025)</h2>
+      <ul>
+        <li>DeFi Expansion — Yield farming, DAO-managed burns, and liquidity rewards</li>
+        <li>NFT Ticketing System — Access to concerts and private events</li>
+        <li>Cross-Chain Deployment — Bridges to L2s like Base, BNB Chain</li>
+        <li>Buyback & Burn Mechanism — Revenue-powered token reduction</li>
+        <li>Creator Toolkits — Tools for minting, proposal creation, and campaigns</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2>Phase 4: Global Expansion (2026+)</h2>
+      <ul>
+        <li>CEX Listings — Gate.io, OKX, KuCoin and more</li>
+        <li>Launch of the "BurnaVerse" — Virtual concerts, galleries, NFT hubs</li>
+        <li>Afrobeat Web3 Summit — IRL & virtual creator events worldwide</li>
+        <li>$BURNA Academy — Education partnerships with African institutions</li>
+        <li>Global Ambassadors & City DAOs — Community-driven meetups and hackathons</li>
+      </ul>
+    </div>
+  </main>
+<footer>
+    <p><div class="social-icons">
+      <a href="https://x.com" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
+      <a href="https://discord.com" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" /></a>
+      <a href="https://t.me" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" /></a>
+    </div></p>
+	<p><a href="#">Terms</a>   |   <a href="#">Privacy</a>   |   <a href="#">Contact</a></p>
+	&copy; 2025 $BURNA Project. Built for the culture.
+  </footer>
 </body>
 </html>
