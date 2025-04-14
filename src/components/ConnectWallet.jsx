@@ -1,44 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
 
-const ConnectWallet = () => {
-  const [account, setAccount] = useState(null);
+function ConnectWallet() {
+  const [walletAddress, setWalletAddress] = useState('');
 
   const connectWallet = async () => {
-    if (!window.ethereum) {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        setWalletAddress(accounts[0]);
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
       alert('Please install MetaMask!');
-      return;
-    }
-
-    try {
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = await provider.getSigner();
-      const address = await signer.getAddress();
-      setAccount(address);
-    } catch (err) {
-      console.error('Wallet connection failed:', err);
     }
   };
 
   return (
-    <button onClick={connectWallet} style={{
-      backgroundColor: 'orange',
-      color: 'white',
-      padding: '0.5rem 1rem',
-      borderRadius: '10px',
-      border: 'none',
-      fontWeight: '600',
-      cursor: 'pointer'
-    }}>
-      {account ? `${account.slice(0, 6)}...${account.slice(-4)}` : 'Connect Wallet'}
-    </button>
+    <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+      <button onClick={connectWallet} style={{ padding: '0.75rem 1.5rem', backgroundColor: 'orange', color: 'white', borderRadius: '10px' }}>
+        {walletAddress ? `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 'Connect Wallet'}
+      </button>
+    </div>
   );
-};
-useEffect(() => {
-  if (account) {
-    window.onWalletConnected && window.onWalletConnected(account);
-  }
-}, [account]);
-
+}
 
 export default ConnectWallet;
