@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo-image.png" />
+    <link rel="icon" type="image/png" href="/burna-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Official Web3 DApp for the Burna Boy Token ($BURNA) - Trade, Track, and Join the Fan-Powered Revolution" />
     <meta name="keywords" content="Burna Boy, $BURNA, Token, Web3, Crypto, DApp, Ethereum, Uniswap, Blockchain" />
@@ -21,6 +21,7 @@
       background-image: url('burna-logo1.png');
       color: orange;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -31,19 +32,23 @@
       top: 0;
       z-index: 1000;
     }
+
     header img.logo {
       height: 60px;
     }
+
     .header-right {
       display: flex;
       align-items: center;
       gap: 1.5rem;
     }
+
     nav {
       display: flex;
       gap: 1.2rem;
       flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -52,10 +57,12 @@
       border-radius: 6px;
       transition: color 0.3s ease, background 0.3s ease;
     }
+
     nav a:hover {
       color: orange;
       background: rgba(255, 165, 0, 0.1);
     }
+
     #connectWalletBtn {
       background-color: orange;
       color: white;
@@ -67,13 +74,14 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    #connectWalletBtn:hover {
+  
+  #connectWalletBtn:hover {
       background-color: #ff9933;
-    }
-	    #root {
+ }
+#root {
   display: flex;
   align-items: center;
-   }
+}
  .hero {
 
   min-height: 90vh;
@@ -244,7 +252,10 @@ section#tokenomics {
       .sponsor-track a:hover img {
         transform: scale(1.1);
   }
-  </style>
+}
+
+
+    </style>
   </head>
   <body>
  <header>
@@ -252,8 +263,9 @@ section#tokenomics {
   <div class="header-right">
     <nav>
       <a href="#features">Features</a>
-      <a href="#about">About</a>
       <a href="#dao">DAO</a>
+	  <p id="wallet-address"></p>
+    <p id="token-balance"></p>
     </nav>
     <button id="connectWalletBtn">Connect Wallet</button>
   </div>
@@ -261,12 +273,12 @@ section#tokenomics {
 
 
 <section class="hero">
-  <p><h1>Drive The Chain With $BURNA!</h1>
- <h2><strong>Meme Magic Meets Music Mayhem — $BURNA is Here to Vibe, Thrive and Let Fans Drive. Backed by Code, Fueled by Fun and Built to Level up Web3’s Swag!🔥</strong></h2></p>
+  <p><h1>Token-Vibe Cultures With $BURNA</h1>
+ <h2><strong>Fuel the vibe with memes that inspire. Powered by code, driven by community — $BURNA decentralizes value, empowers its holders, and brings the fun back to Web3</strong></h2></p>
   <div class="cta-buttons">
-  <a href="#whitepaper">Read Whitepaper</a>
-  <a href="#roadmap">Roadmap</a>
-  <a href="#burna">Who is Burna Boy?</a>
+  <a href="/burna_whitepaper_expanded.pdf">Read Whitepaper</a>
+  <a href="/roadmap">Roadmap</a>
+  <a href="/burna">Who is Burna Boy?</a>
 </div>
 </div>
   <div class="diamond-grid" id="features">
