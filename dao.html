@@ -23,11 +23,9 @@
       top: 0;
       z-index: 1000;
     }
-
     header img.logo {
       height: 60px;
     }
-
     .header-right {
       display: flex;
       align-items: center;
@@ -109,6 +107,26 @@
       height: 24px;
       filter: brightness(0) invert(1);
     }
+	.hero {
+
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hero h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      }
   </style>
 </head>
 <body>
@@ -118,8 +136,8 @@
 	  </a>
   <div class="header-right">
     <nav>
-      <a href="/features">Features</a>
-      <a href="/dao">DAO</a>
+      <a href="features.html">Features</a>
+      <a href="dao.html">DAO</a>
 	  <p id="wallet-address"></p>
     </nav>
     <button id="connectWalletBtn">Connect Wallet</button>
