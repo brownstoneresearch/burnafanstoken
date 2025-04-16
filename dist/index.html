@@ -3,7 +3,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<<<<<<<< HEAD:dist/index.html
     <link rel="icon" type="image/png" href="/assets/burna-favicon-D1E8lM3D.png" />
+========
+    <link rel="icon" type="image/png" href="/burna-favicon.png" />
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Official Web3 DApp for the Burna Boy Token ($BURNA) - Trade, Track, and Join the Fan-Powered Revolution" />
     <meta name="keywords" content="Burna Boy, $BURNA, Token, Web3, Crypto, DApp, Ethereum, Uniswap, Blockchain" />
@@ -14,6 +18,7 @@
 
     <title>Burna Boy Token | $BURNA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<<<<<<<< HEAD:dist/index.html
     <style>
      body {
       margin: 0;
@@ -278,16 +283,290 @@ section#tokenomics {
 
     </style>
     <script type="module" crossorigin src="/assets/index-D9ocOpfh.js"></script>
+========
+    <style>
+     body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-image: url('burna-logo1.png');
+      color: orange;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0e0e0e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img.logo {
+      height: 60px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      transition: color 0.3s ease, background 0.3s ease;
+    }
+
+    nav a:hover {
+      color: orange;
+      background: rgba(255, 165, 0, 0.1);
+    }
+
+    #connectWalletBtn {
+      background-color: orange;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+  #connectWalletBtn:hover {
+      background-color: #ff9933;
+ }
+#root {
+  display: flex;
+  align-items: center;
+}
+ .hero {
+
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-buttons a {
+  background-color: orange;
+  color: black;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background-color: #ff9933;
+}
+
+section#tokenomics {
+  background: rgba(290, 290, 290, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  border: 1px solid rgba(290, 290, 290, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      }
+      .diamond-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+      }
+      .diamond-grid .card {
+        background: rgba(275, 275, 275, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        width: 280px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .diamond-grid .card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+      }
+      .card h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .card p {
+        color: #fff;
+        font-size: 0.95rem;
+      }
+      .icon {
+        font-size: 2rem;
+        color: orange;
+        margin-bottom: 0.75rem;
+      }
+      .cta-center {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    #buyBtn {
+      background-color: #222;
+      color: orange;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    #buyBtn:hover {
+      background-color: #333;
+    }
+
+    #buyError {
+      display: none;
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+      .cta-center button {
+        background-color: orange;
+        color: white;
+        font-size: 1.1rem;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+      }
+      .cta-center button:hover {
+        background-color: #ff9933;
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      @keyframes scrollSponsors {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      footer {
+        background-color: #111;
+        padding: 2rem;
+        text-align: center;
+        color: #888;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: #ff9933;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+    }
+      .sponsor-track a img {
+        transition: transform 0.3s ease;
+      }
+      .sponsor-track a:hover img {
+        transform: scale(1.1);
+  }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f04a3c;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d8372a;
+}
+
+.pdf-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+    </style>
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
   </head>
   <body>
  <header>
   <a href="index.html">
+<<<<<<<< HEAD:dist/index.html
       <img src="/assets/logo-image-D9QJv__a.png" href="index.html" alt="$BURNA Logo" class="logo" />
 	  </a>
   <div class="header-right">
     <nav>
       <a href="features.html">Features</a>
       <a href="dao.html">DAO</a>
+========
+      <img src="logo-image.png" href="index.html" alt="$BURNA Logo" class="logo" />
+	  </a>
+  <div class="header-right">
+    <nav>
+      <a href="/features.html">Features</a>
+      <a href="/dao.html">DAO</a>
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
 	  <p id="wallet-address"></p>
     </nav>
     <button id="connectWalletBtn">Connect Wallet</button>
@@ -301,8 +580,13 @@ section#tokenomics {
   <div class="cta-buttons">
  <a href="https://drive.google.com/file/d/1YcmG-TFg-L9TXWiN6ae5WJVVHTK9kNYz/view?pli=1" class="download-btn"
   >View $BURNA Whitepaper</a>
+<<<<<<<< HEAD:dist/index.html
   <a href="roadmap.html">Roadmap</a>
   <a href="burna.html">Who is Burna Boy?</a>
+========
+  <a href="/roadmap.html">Roadmap</a>
+  <a href="/burna.html">Who is Burna Boy?</a>
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
 </div>
   <div class="diamond-grid" id="features">
     <!-- Feature 1 -->
@@ -340,7 +624,12 @@ section#tokenomics {
       <p id="buyError" style="color: red; font-size: 0.85rem; display: none;"></p>
 
       <!-- Wallet Connect Mount -->
+<<<<<<<< HEAD:dist/index.html
       <div id="root"></div>
+========
+      <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
     </div>
 
     <!-- Feature 4 -->
@@ -414,10 +703,17 @@ section#tokenomics {
   </strong> </section>
 <div class="sponsor-track" style="display: flex; ...">
   <div style="display: flex; gap: 6rem; animation: scrollSponsors 25s linear infinite; align-items: center; white-space: nowrap;">
+<<<<<<<< HEAD:dist/index.html
   <a href="https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/assets/logo1-57JlcUIY.png" alt="Sponsor 1" style="height: 60px; object-fit: contain;" /></a>
   <a href="https://pinksale.finance" target="_blank"><img src="/assets/logo2-hOP5SERe.png" alt="Sponsor 2" style="height: 60px; object-fit: contain;" /></a>
   <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x00299231273752123aed17229810c0e9a7681ce6?t" target="_blank"><img src="/assets/logo3-BhuKGTVa.png" alt="Sponsor 3" style="height: 60px; object-fit: contain;" /></a>
   <a href="https://etherscan.io/token/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/assets/logo4-Bms9yAoN.png" alt="Sponsor 4" style="height: 60px; object-fit: contain;" /></a>
+========
+  <a href="https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/sponsors/logo1.png" alt="Sponsor 1" style="height: 60px; object-fit: contain;" /></a>
+  <a href="https://pinksale.finance" target="_blank"><img src="/sponsors/logo2.png" alt="Sponsor 2" style="height: 60px; object-fit: contain;" /></a>
+  <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x00299231273752123aed17229810c0e9a7681ce6?t" target="_blank"><img src="/sponsors/logo3.png" alt="Sponsor 3" style="height: 60px; object-fit: contain;" /></a>
+  <a href="https://etherscan.io/token/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/sponsors/logo4.png" alt="Sponsor 4" style="height: 60px; object-fit: contain;" /></a>
+>>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
 </div>
 </div>
   <footer>
