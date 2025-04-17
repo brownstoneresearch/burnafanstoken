@@ -1,94 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-<<<<<<<< HEAD:dist/index.html
-    <link rel="icon" type="image/png" href="/assets/burna-favicon-D1E8lM3D.png" />
-========
-    <link rel="icon" type="image/png" href="/burna-favicon.png" />
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
+    <title>Burna Boy Token | $BURNA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Official Web3 DApp for the Burna Boy Token ($BURNA) - Trade, Track, and Join the Fan-Powered Revolution" />
     <meta name="keywords" content="Burna Boy, $BURNA, Token, Web3, Crypto, DApp, Ethereum, Uniswap, Blockchain" />
     <meta name="author" content="burnaboy" />
-	<meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/png" href="/burna-favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>     
+	body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-image: url('/burna-logo1.png');
+  background-color: #000;
+  color: orange;
+}
 
-    <title>Burna Boy Token | $BURNA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<<<<<<<< HEAD:dist/index.html
-    <style>
-     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-image: url('/assets/burna-logo1-C59-ue_d.png');
-      color: orange;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0e0e0e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0e0e0e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+header img.logo {
+  height: 60px;
+}
 
-    header img.logo {
-      height: 60px;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      transition: color 0.3s ease, background 0.3s ease;
-    }
-
-    nav a:hover {
-      color: orange;
-      background: rgba(255, 165, 0, 0.1);
-    }
-
-    #connectWalletBtn {
-      background-color: orange;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-  #connectWalletBtn:hover {
-      background-color: #ff9933;
- }
-#root {
+.header-right {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
- .hero {
 
+nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+  background: rgba(255, 165, 0, 0.1);
+}
+
+#connectWalletBtn {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#connectWalletBtn:hover {
+  background-color: #ff9933;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+h1, h2 {
+  color: orange;
+}
+
+.hero {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -101,6 +105,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -124,404 +129,142 @@
 }
 
 section#tokenomics {
-  background: rgba(290, 290, 290, 0.12);
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 1rem;
-  border: 1px solid rgba(290, 290, 290, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-      .hero h1 {
-        font-size: clamp(2.5rem, 8vw, 5rem);
-        font-weight: 900;
-        color: #fff;
-        text-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      }
-      .diamond-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
-        gap: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        padding: 0 2rem;
-        justify-items: center;
-        align-items: center;
-        position: relative;
-      }
-      .diamond-grid .card {
-        background: rgba(275, 275, 275, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        width: 280px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .diamond-grid .card:hover {
-        transform: translateY(-5px) scale(1.03);
-        box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
-      }
-      .card h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-      .card p {
-        color: #fff;
-        font-size: 0.95rem;
-      }
-      .icon {
-        font-size: 2rem;
-        color: orange;
-        margin-bottom: 0.75rem;
-      }
-      .cta-center {
-      text-align: center;
-      margin-top: 4rem;
-    }
 
-    #buyBtn {
-      background-color: #222;
-      color: orange;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
-
-    #buyBtn:hover {
-      background-color: #333;
-    }
-
-    #buyError {
-      display: none;
-      color: red;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-      .cta-center button {
-        background-color: orange;
-        color: white;
-        font-size: 1.1rem;
-        padding: 0.75rem 2rem;
-        border: none;
-        border-radius: 1rem;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
-      }
-      .cta-center button:hover {
-        background-color: #ff9933;
-      }
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-      @keyframes scrollSponsors {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      footer {
-        background-color: #111;
-        padding: 2rem;
-        text-align: center;
-        color: #888;
-        font-size: 0.9rem;
-      }
-      footer a {
-        color: #ff9933;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      display: inline-block;
-    }
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      filter: brightness(0) invert(1);
-    }
-      .sponsor-track a img {
-        transition: transform 0.3s ease;
-      }
-      .sponsor-track a:hover img {
-        transform: scale(1.1);
-  }
-.download-btn {
-  display: inline-flex;
+.diamond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  justify-items: center;
   align-items: center;
-  gap: 10px;
-  background-color: #f04a3c;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s ease;
+  position: relative;
 }
 
-.download-btn:hover {
-  background-color: #d8372a;
-}
-
-.pdf-icon {
-  width: 20px;
-  height: 20px;
-}
-
-
-    </style>
-    <script type="module" crossorigin src="/assets/index-D9ocOpfh.js"></script>
-========
-    <style>
-     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-image: url('burna-logo1.png');
-      color: orange;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0e0e0e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header img.logo {
-      height: 60px;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      transition: color 0.3s ease, background 0.3s ease;
-    }
-
-    nav a:hover {
-      color: orange;
-      background: rgba(255, 165, 0, 0.1);
-    }
-
-    #connectWalletBtn {
-      background-color: orange;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-  #connectWalletBtn:hover {
-      background-color: #ff9933;
- }
-#root {
-  display: flex;
-  align-items: center;
-}
- .hero {
-
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem;
-  background-color: rgba(0, 0, 0, 0.4);
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 280px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-buttons a {
-  background-color: orange;
-  color: black;
-  font-weight: 600;
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 0.75rem;
+}
+
+.cta-center {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+#buyBtn {
+  background-color: #222;
+  color: orange;
   padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.3s ease;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
-.cta-buttons a:hover {
+#buyBtn:hover {
+  background-color: #333;
+}
+
+#buyError {
+  display: none;
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.cta-center button {
+  background-color: orange;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+}
+
+.cta-center button:hover {
   background-color: #ff9933;
 }
 
-section#tokenomics {
-  background: rgba(290, 290, 290, 0.12);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 1rem;
-  border: 1px solid rgba(290, 290, 290, 0.12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+footer {
+  background-color: #111;
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
 }
-      .hero h1 {
-        font-size: clamp(2.5rem, 8vw, 5rem);
-        font-weight: 900;
-        color: #fff;
-        text-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      }
-      .diamond-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
-        gap: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        padding: 0 2rem;
-        justify-items: center;
-        align-items: center;
-        position: relative;
-      }
-      .diamond-grid .card {
-        background: rgba(275, 275, 275, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        width: 280px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .diamond-grid .card:hover {
-        transform: translateY(-5px) scale(1.03);
-        box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
-      }
-      .card h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-      .card p {
-        color: #fff;
-        font-size: 0.95rem;
-      }
-      .icon {
-        font-size: 2rem;
-        color: orange;
-        margin-bottom: 0.75rem;
-      }
-      .cta-center {
-      text-align: center;
-      margin-top: 4rem;
-    }
 
-    #buyBtn {
-      background-color: #222;
-      color: orange;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
+footer a {
+  color: #ff9933;
+  text-decoration: none;
+}
 
-    #buyBtn:hover {
-      background-color: #333;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
 
-    #buyError {
-      display: none;
-      color: red;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-      .cta-center button {
-        background-color: orange;
-        color: white;
-        font-size: 1.1rem;
-        padding: 0.75rem 2rem;
-        border: none;
-        border-radius: 1rem;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
-      }
-      .cta-center button:hover {
-        background-color: #ff9933;
-      }
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-      @keyframes scrollSponsors {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      footer {
-        background-color: #111;
-        padding: 2rem;
-        text-align: center;
-        color: #888;
-        font-size: 0.9rem;
-      }
-      footer a {
-        color: #ff9933;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      display: inline-block;
-    }
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      filter: brightness(0) invert(1);
-    }
-      .sponsor-track a img {
-        transition: transform 0.3s ease;
-      }
-      .sponsor-track a:hover img {
-        transform: scale(1.1);
-  }
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.sponsor-track a img {
+  transition: transform 0.3s ease;
+}
+
+.sponsor-track a:hover img {
+  transform: scale(1.1);
+}
+
 .download-btn {
   display: inline-flex;
   align-items: center;
@@ -545,214 +288,135 @@ section#tokenomics {
   height: 20px;
 }
 
-
-    </style>
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
+</style>
+    <script type="module" crossorigin src="/assets/index-B5Qt9EMX.js"></script>
   </head>
+
   <body>
- <header>
-  <a href="index.html">
-<<<<<<<< HEAD:dist/index.html
-      <img src="/assets/logo-image-D9QJv__a.png" href="index.html" alt="$BURNA Logo" class="logo" />
-	  </a>
-  <div class="header-right">
-    <nav>
-      <a href="features.html">Features</a>
-      <a href="dao.html">DAO</a>
-========
-      <img src="logo-image.png" href="index.html" alt="$BURNA Logo" class="logo" />
-	  </a>
-  <div class="header-right">
-    <nav>
-      <a href="/features.html">Features</a>
-      <a href="/dao.html">DAO</a>
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
-	  <p id="wallet-address"></p>
-    </nav>
-    <button id="connectWalletBtn">Connect Wallet</button>
-  </div>
-</header>
-
-
-<section class="hero">
-  <p><h1>Token-Vibe Cultures With $BURNA</h1>
- <h2><strong>Fuel the vibe with memes that inspire. Powered by code, driven by community — $BURNA decentralizes value, empowers its holders, and brings the fun back to Web3</strong></h2></p>
-  <div class="cta-buttons">
- <a href="https://drive.google.com/file/d/1YcmG-TFg-L9TXWiN6ae5WJVVHTK9kNYz/view?pli=1" class="download-btn"
-  >View $BURNA Whitepaper</a>
-<<<<<<<< HEAD:dist/index.html
-  <a href="roadmap.html">Roadmap</a>
-  <a href="burna.html">Who is Burna Boy?</a>
-========
-  <a href="/roadmap.html">Roadmap</a>
-  <a href="/burna.html">Who is Burna Boy?</a>
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
-</div>
-  <div class="diamond-grid" id="features">
-    <!-- Feature 1 -->
-    <div class="card" style="grid-column: 2; grid-row: 1;">
-      <div class="icon">🌐</div>
-      <h2>Decentralized Governance (DAO)</h2>
-      <p>
-        Participate in a fully autonomous governance system where $BURNA holders control the future. Propose, deliberate, and execute smart contract-driven policies for treasury use, platform updates, and community-led innovations without intermediaries.
-      </p>
-    </div>
-
-    <!-- Feature 2 -->
-    <div class="card" style="grid-column: 1; grid-row: 2;">
-      <div class="icon">🎧</div>
-      <h2>Web3 Music NFTs</h2>
-      <p>
-        Unlock Afrobeat’s next frontier with NFT-backed music, animations, and concert moments. Own collectible digital art with blockchain-certified provenance and enjoy token-gated access to events, backstage drops, and exclusive artist releases.
-      </p>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="card" style="grid-column: 3; grid-row: 2;">
-      <div class="icon">🤝</div>
-      <h2>Fan-Powered Creator Economy</h2>
-      <p>
-        $BURNA fuels a permissionless creator economy. Fans become co-producers by funding albums, voting on collaborations, and earning social rewards via peer-to-peer engagement. Eliminate middlemen, amplify creativity.
-      </p>
-    </div>
-
-    <!-- Center CTA (Buy + Connect) -->
-    <div class="card cta-center" style="grid-column: 2; grid-row: 2;">
-      
-
-      <button id="buyBtn">BUY ON UNISWAP</button>
-      <p id="buyError" style="color: red; font-size: 0.85rem; display: none;"></p>
-
-      <!-- Wallet Connect Mount -->
-<<<<<<<< HEAD:dist/index.html
-      <div id="root"></div>
-========
-      <div id="root"></div>
-      <script type="module" src="/src/main.jsx"></script>
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
-    </div>
-
-    <!-- Feature 4 -->
-    <div class="card" style="grid-column: 2; grid-row: 3;">
-      <div class="icon">💸</div>
-      <h2>DeFi Infrastructure for Culture</h2>
-      <p>
-        Power the ecosystem with decentralized finance tools: stake tokens, earn yields, and provide liquidity — all while reinforcing a tokenized circular economy rooted in Afrobeat expression and Web3 utility.
-      </p>
-    </div>
-  </div>
-</section>
-
-  <section id="tokenomics" style="max-width: 900px; margin: 4rem auto; padding: 2rem;"><strong>
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: white;">$BURNA TOKENOMICS</h2>
-	<div style="margin-top: 1.5rem; text-align: center;">
-      <h3 style="color: white; margin-bottom: 0.5rem;">Smart Contract Address: 0x00b8A9Bb1DcaB2Cf2375284d70B39e6ef7d86aAE </h3>
-    </div>
-	<p style="margin-top: 2rem; text-align: center; font-size: 0.95rem; color: white;">
-      Max Supply: <strong>1,000,000,000 $BURNA</strong> Tokens | No inflation | Burn mechanisms apply during NFT redemptions and select DeFi events.
-    </p>
-    <table style="width: 100%; border-collapse: collapse; margin-top: 2rem; color: #eee;">
-      <thead>
-        <tr style="background-color: #222;">
-          <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #444;">Category</th>
-          <th style="padding: 1rem; text-align: right; border-bottom: 1px solid #444;">Allocation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding: 0.75rem; border-bottom: 1px solid #333;">Community & Rewards</td>
-          <td style="padding: 0.75rem; text-align: right; border-bottom: 1px solid #333;">40%</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.75rem; border-bottom: 1px solid #333;">Public Sale</td>
-          <td style="padding: 0.75rem; text-align: right; border-bottom: 1px solid #333;">20%</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.75rem; border-bottom: 1px solid #333;">Development</td>
-          <td style="padding: 0.75rem; text-align: right; border-bottom: 1px solid #333;">15%</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.75rem; border-bottom: 1px solid #333;">Team & Advisors</td>
-          <td style="padding: 0.75rem; text-align: right; border-bottom: 1px solid #333;">10%</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.75rem; border-bottom: 1px solid #333;">DAO Treasury</td>
-          <td style="padding: 0.75rem; text-align: right; border-bottom: 1px solid #333;">10%</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.75rem;">Marketing & Partnerships</td>
-          <td style="padding: 0.75rem; text-align: right;">5%</td>
-        </tr>
-      </tbody>
-    </table>
-  <div style="text-align: center; margin-top: 3rem;"><strong>
-  <div style="text-align: center; color: white; max-width: 700px; margin: 0 auto 2rem;">
-      Designed for long-term sustainability, accessibility, and community empowerment, $BURNA Tokenomics ensures fair distribution and future growth.
-    </div>
-        <ul style="list-style: none; padding: 0; color: white; font-size: 0.95rem; font: bold;">
-          <li>✔️ Stake to earn passive income from community growth</li>
-          <li>✔️ Vote on proposals through DAO governance</li>
-          <li>✔️ Burn tokens for rare NFT rewards</li>
-          <li>✔️ Trade on DEX platforms like Uniswap</li>
-          <li>✔️ Track token stats on platforms like CoinGecko & Etherscan</li>
-        </ul>
-        <p style="margin-top: 1.5rem; color: white; font-size: 0.9rem;">
-          $BURNA is verified and audited. Community-driven. Utility-powered. Culturally relevant.
-        </p>
+    <header>
+      <a href="/">
+        <img src="/logo-image.png" alt="$BURNA Logo" class="logo" />
+      </a>
+      <div class="header-right">
+        <nav>
+          <a href="/features.html">Features</a>
+          <a href="/dao.html">DAO</a>
+        </nav>
+        <button id="connectWalletBtn">Connect Wallet</button>
       </div>
-  </strong> </section>
-<div class="sponsor-track" style="display: flex; ...">
-  <div style="display: flex; gap: 6rem; animation: scrollSponsors 25s linear infinite; align-items: center; white-space: nowrap;">
-<<<<<<<< HEAD:dist/index.html
-  <a href="https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/assets/logo1-57JlcUIY.png" alt="Sponsor 1" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://pinksale.finance" target="_blank"><img src="/assets/logo2-hOP5SERe.png" alt="Sponsor 2" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x00299231273752123aed17229810c0e9a7681ce6?t" target="_blank"><img src="/assets/logo3-BhuKGTVa.png" alt="Sponsor 3" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://etherscan.io/token/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/assets/logo4-Bms9yAoN.png" alt="Sponsor 4" style="height: 60px; object-fit: contain;" /></a>
-========
-  <a href="https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/sponsors/logo1.png" alt="Sponsor 1" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://pinksale.finance" target="_blank"><img src="/sponsors/logo2.png" alt="Sponsor 2" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x00299231273752123aed17229810c0e9a7681ce6?t" target="_blank"><img src="/sponsors/logo3.png" alt="Sponsor 3" style="height: 60px; object-fit: contain;" /></a>
-  <a href="https://etherscan.io/token/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/sponsors/logo4.png" alt="Sponsor 4" style="height: 60px; object-fit: contain;" /></a>
->>>>>>>> 7de3be2f2313278d32cc06f28f4e1d7bc881c23a:index.html
-</div>
-</div>
-  <footer>
-    <p><div class="social-icons">
-      <a href="https://x.com" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
-      <a href="https://discord.com" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" /></a>
-      <a href="https://t.me" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" /></a>
-    </div></p>
-	<p><a href="#">Terms</a>   |   <a href="#">Privacy</a>   |   <a href="#">Contact</a></p>
-	&copy; 2025 $BURNA Project. Built for the culture.
-  </footer>
-	  
-<script>
-  let walletConnected = false;
+    </header>
 
-  document.getElementById("connectWalletBtn").addEventListener("click", async () => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-        const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
-        document.getElementById("connectWalletBtn").innerText = short;
-        walletConnected = true;
-        document.getElementById("buyError").style.display = "none";
-      } catch (err) {
-        alert("Wallet connection failed.");
-      }
-    } else {
-      alert("Please install MetaMask.");
-    }
-  });
+    <section class="hero">
+      <h1>Token-Vibe Cultures With $BURNA</h1>
+      <h2><strong>Fuel the vibe with memes that inspire. Powered by code, driven by community — $BURNA decentralizes value, empowers its holders, and brings the fun back to Web3</strong></h2>
+      <div class="cta-buttons">
+        <a href="https://drive.google.com/file/d/1YcmG-TFg-L9TXWiN6ae5WJVVHTK9kNYz/view?pli=1" class="download-btn">View $BURNA Whitepaper</a>
+        <a href="/roadmap.html">Roadmap</a>
+        <a href="/burna.html">Who is Burna Boy?</a>
+      </div>
 
-  document.getElementById("buyBtn").addEventListener("click", () => {
-    if (!walletConnected) {
-      document.getElementById("buyError").innerText = "Please connect your wallet before buying $BURNA.";
-      document.getElementById("buyError").style.display = "block";
-      return;
-    }
-    window.open("https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae", "_blank");
-  });
-</script>
-</body>
+      <div class="diamond-grid">
+        <div class="card" style="grid-column: 2; grid-row: 1;">
+          <div class="icon">🌐</div>
+          <h2>Decentralized Governance (DAO)</h2>
+          <p>Participate in a fully autonomous governance system where $BURNA holders control the future. Propose, deliberate, and execute smart contract-driven policies.</p>
+        </div>
+
+        <div class="card" style="grid-column: 1; grid-row: 2;">
+          <div class="icon">🎧</div>
+          <h2>Web3 Music NFTs</h2>
+          <p>Unlock Afrobeat’s next frontier with NFT-backed music and concert moments. Enjoy token-gated access to exclusive drops and experiences.</p>
+        </div>
+
+        <div class="card" style="grid-column: 3; grid-row: 2;">
+          <div class="icon">🤝</div>
+          <h2>Fan-Powered Creator Economy</h2>
+          <p>Become a co-producer and earn rewards by funding artists, voting on collaborations, and engaging in community-driven creativity.</p>
+        </div>
+
+        <div class="card cta-center" style="grid-column: 2; grid-row: 2;">
+          <button id="buyBtn">BUY ON UNISWAP</button>
+          <p id="buyError" style="color: red; font-size: 0.85rem; display: none;"></p>
+          <div id="root"></div>
+        </div>
+
+        <div class="card" style="grid-column: 2; grid-row: 3;">
+          <div class="icon">💸</div>
+          <h2>DeFi Infrastructure for Culture</h2>
+          <p>Stake tokens, earn yields, and power a circular tokenized economy rooted in Afrobeat expression and Web3 utility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokenomics">
+      <h2 style="text-align: center;">$BURNA TOKENOMICS</h2>
+      <div style="text-align: center; margin: 1rem 0;">
+        <h3>Smart Contract Address: <code>0x00b8A9Bb1DcaB2Cf2375284d70B39e6ef7d86aAE</code></h3>
+        <p>Max Supply: <strong>1,000,000,000 $BURNA</strong> Tokens | Burn mechanisms apply</p>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Allocation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Community & Rewards</td><td>40%</td></tr>
+          <tr><td>Public Sale</td><td>20%</td></tr>
+          <tr><td>Development</td><td>15%</td></tr>
+          <tr><td>Team & Advisors</td><td>10%</td></tr>
+          <tr><td>DAO Treasury</td><td>10%</td></tr>
+          <tr><td>Marketing & Partnerships</td><td>5%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="sponsor-track" style="display: flex; overflow-x: auto;">
+      <div style="display: flex; gap: 6rem; align-items: center; white-space: nowrap;">
+        <a href="https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/logo1.png" alt="Uniswap" style="height: 60px;" /></a>
+        <a href="https://pinksale.finance" target="_blank"><img src="/logo2.png" alt="Pinksale" style="height: 60px;" /></a>
+        <a href="https://dextools.io" target="_blank"><img src="/logo3.png" alt="Dextools" style="height: 60px;" /></a>
+        <a href="https://etherscan.io/token/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae" target="_blank"><img src="/logo4.png" alt="Etherscan" style="height: 60px;" /></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://x.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
+        <a href="https://discord.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" /></a>
+        <a href="https://t.me" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" /></a>
+      </div>
+      <p><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Contact</a></p>
+      &copy; 2025 $BURNA Project. Built for the culture.
+    </footer>
+
+    <script>
+      let walletConnected = false;
+      const connectBtn = document.getElementById("connectWalletBtn");
+      const buyBtn = document.getElementById("buyBtn");
+
+      connectBtn.addEventListener("click", async () => {
+        if (typeof window.ethereum !== "undefined") {
+          try {
+            const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+            const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+            connectBtn.innerText = short;
+            walletConnected = true;
+            document.getElementById("buyError").style.display = "none";
+          } catch (err) {
+            alert("Wallet connection failed.");
+          }
+        } else {
+          alert("Please install MetaMask.");
+        }
+      });
+
+      buyBtn.addEventListener("click", () => {
+        if (!walletConnected) {
+          document.getElementById("buyError").innerText = "Please connect your wallet before buying $BURNA.";
+          document.getElementById("buyError").style.display = "block";
+          return;
+        }
+        window.open("https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae", "_blank");
+      });
+    </script>
+  </body>
 </html>

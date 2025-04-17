@@ -1,10 +1,10 @@
-     body {
+ body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-image: url('burna-logo1.png');
-	  background-color: #000; 
+      background-image: url('/assets/burna-logo1-C59-ue_d.png');
       color: orange;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -61,32 +61,6 @@
   #connectWalletBtn:hover {
       background-color: #ff9933;
  }
-  main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      color: white;
-    }
-    h1, h2 {
-      color: orange;
-    }
-    .phase {
-      margin-bottom: 2rem;
-    }
-    .phase h3 {
-      margin-top: 1rem;
-      font-size: 1.25rem;
-      color: #fff;
-    }
-    .phase ul {
-      padding-left: 1.5rem;
-    }
-    .phase ul li {
-      margin-bottom: 0.75rem;
-	  }
 #root {
   display: flex;
   align-items: center;
@@ -282,3 +256,4 @@ section#tokenomics {
 .pdf-icon {
   width: 20px;
   height: 20px;
+}
