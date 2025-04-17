@@ -1,13 +1,9 @@
-
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  root: './',
-  publicDir: 'public',
+export default {
+  root: ".",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     rollupOptions: {
-      input: 'public/index.html',
+      input: "index.html"
     }
   }
-});
+};
