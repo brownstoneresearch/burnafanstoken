@@ -1,98 +1,83 @@
-     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-image: url('burna-logo1.png');
-	  background-color: #000; 
-      color: orange;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #0e0e0e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-image: url('/burna-logo1.png');
+  background-color: #000;
+  color: orange;
+}
 
-    header img.logo {
-      height: 60px;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0e0e0e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
+header img.logo {
+  height: 60px;
+}
 
-    nav {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      transition: color 0.3s ease, background 0.3s ease;
-    }
-
-    nav a:hover {
-      color: orange;
-      background: rgba(255, 165, 0, 0.1);
-    }
-
-    #connectWalletBtn {
-      background-color: orange;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-  #connectWalletBtn:hover {
-      background-color: #ff9933;
- }
-  main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      color: white;
-    }
-    h1, h2 {
-      color: orange;
-    }
-    .phase {
-      margin-bottom: 2rem;
-    }
-    .phase h3 {
-      margin-top: 1rem;
-      font-size: 1.25rem;
-      color: #fff;
-    }
-    .phase ul {
-      padding-left: 1.5rem;
-    }
-    .phase ul li {
-      margin-bottom: 0.75rem;
-	  }
-#root {
+.header-right {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
- .hero {
 
+nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+  background: rgba(255, 165, 0, 0.1);
+}
+
+#connectWalletBtn {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#connectWalletBtn:hover {
+  background-color: #ff9933;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+h1, h2 {
+  color: orange;
+}
+
+.hero {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -105,6 +90,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -128,139 +114,142 @@
 }
 
 section#tokenomics {
-  background: rgba(290, 290, 290, 0.12);
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 1rem;
-  border: 1px solid rgba(290, 290, 290, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-      .hero h1 {
-        font-size: clamp(2.5rem, 8vw, 5rem);
-        font-weight: 900;
-        color: #fff;
-        text-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      }
-      .diamond-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
-        gap: 1rem;
-        max-width: 1000px;
-        margin: 4rem auto;
-        padding: 0 2rem;
-        justify-items: center;
-        align-items: center;
-        position: relative;
-      }
-      .diamond-grid .card {
-        background: rgba(275, 275, 275, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        width: 280px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .diamond-grid .card:hover {
-        transform: translateY(-5px) scale(1.03);
-        box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
-      }
-      .card h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-      .card p {
-        color: #fff;
-        font-size: 0.95rem;
-      }
-      .icon {
-        font-size: 2rem;
-        color: orange;
-        margin-bottom: 0.75rem;
-      }
-      .cta-center {
-      text-align: center;
-      margin-top: 4rem;
-    }
 
-    #buyBtn {
-      background-color: #222;
-      color: orange;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
+.diamond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
 
-    #buyBtn:hover {
-      background-color: #333;
-    }
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 280px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    #buyError {
-      display: none;
-      color: red;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-      .cta-center button {
-        background-color: orange;
-        color: white;
-        font-size: 1.1rem;
-        padding: 0.75rem 2rem;
-        border: none;
-        border-radius: 1rem;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
-      }
-      .cta-center button:hover {
-        background-color: #ff9933;
-      }
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-      @keyframes scrollSponsors {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      footer {
-        background-color: #111;
-        padding: 2rem;
-        text-align: center;
-        color: #888;
-        font-size: 0.9rem;
-      }
-      footer a {
-        color: #ff9933;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      display: inline-block;
-    }
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      filter: brightness(0) invert(1);
-    }
-      .sponsor-track a img {
-        transition: transform 0.3s ease;
-      }
-      .sponsor-track a:hover img {
-        transform: scale(1.1);
-  }
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 0.75rem;
+}
+
+.cta-center {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+#buyBtn {
+  background-color: #222;
+  color: orange;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#buyBtn:hover {
+  background-color: #333;
+}
+
+#buyError {
+  display: none;
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.cta-center button {
+  background-color: orange;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+}
+
+.cta-center button:hover {
+  background-color: #ff9933;
+}
+
+footer {
+  background-color: #111;
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff9933;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.sponsor-track a img {
+  transition: transform 0.3s ease;
+}
+
+.sponsor-track a:hover img {
+  transform: scale(1.1);
+}
+
 .download-btn {
   display: inline-flex;
   align-items: center;
