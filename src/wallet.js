@@ -1,35 +1,28 @@
+let walletConnected = false;
+      const connectBtn = document.getElementById("connectWalletBtn");
+      const buyBtn = document.getElementById("buyBtn");
 
-const tokenAddress = "0x00b8A9Bb1DcaB2Cf2375284d70B39e6ef7d86aAE";
-const tokenABI = [
-  { "constant": true, "inputs": [{ "name": "owner", "type": "address" }], "name": "balanceOf", "outputs": [{ "name": "balance", "type": "uint256" }], "type": "function" },
-  { "constant": true, "inputs": [], "name": "decimals", "outputs": [{ "name": "", "type": "uint8" }], "type": "function" }
-];
+      connectBtn.addEventListener("click", async () => {
+        if (typeof window.ethereum !== "undefined") {
+          try {
+            const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+            const short = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+            connectBtn.innerText = short;
+            walletConnected = true;
+            document.getElementById("buyError").style.display = "none";
+          } catch (err) {
+            alert("Wallet connection failed.");
+          }
+        } else {
+          alert("Please install MetaMask.");
+        }
+      });
 
-let web3, account;
-
-async function connectWallet() {
-  if (window.ethereum) {
-    try {
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
-      web3 = new Web3(window.ethereum);
-      const accounts = await web3.eth.getAccounts();
-      account = accounts[0];
-      document.getElementById('wallet-address').innerText = 'Connected: ' + account;
-      getBalance(account);
-    } catch (error) {
-      console.error(error);
-    }
-  } else {
-    alert('MetaMask not found!');
-  }
-}
-
-async function getBalance(user) {
-  const contract = new web3.eth.Contract(tokenABI, tokenAddress);
-  const balance = await contract.methods.balanceOf(user).call();
-  const decimals = await contract.methods.decimals().call();
-  const formatted = balance / (10 ** decimals);
-  document.getElementById('token-balance').innerText = `$BURNA Balance: ${formatted}`;
-  const gated = document.getElementById('gated-content');
-  if (gated) gated.style.display = formatted > 0 ? 'block' : 'none';
-}
+      buyBtn.addEventListener("click", () => {
+        if (!walletConnected) {
+          document.getElementById("buyError").innerText = "Please connect your wallet before buying $BURNA.";
+          document.getElementById("buyError").style.display = "block";
+          return;
+        }
+        window.open("https://app.uniswap.org/explore/tokens/ethereum/0x00b8a9bb1dcab2cf2375284d70b39e6ef7d86aae", "_blank");
+      });
